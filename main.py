@@ -15,7 +15,6 @@ writer.add_document(content="Python это язык программирован
 writer.add_document(content="Whoosh используется для поиска")
 writer.commit()
 
-# поиск
 with ix.searcher() as searcher:
     query = QueryParser("content", ix.schema).parse("поиска")
     results = searcher.search(query)
